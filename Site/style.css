@@ -1,0 +1,402 @@
+/* Общие стили для изображений и иконок */
+.icon,
+.product-image {
+    width: 25px;
+    height: 25px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1E213D;
+    color: #FFF;
+    transition: background-color 0.5s ease;
+    scroll-behavior: smooth;
+}
+
+body:hover {
+    background-color: #0C0E1F;
+}
+
+/* Стили для основного экрана */
+.main-screen {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Centro Sans Pro', sans-serif; /* Добавлено для использования шрифта Centro Sans Pro */
+}
+
+.language-label {
+    cursor: pointer;
+    user-select: none;
+}
+
+.russian-label {
+    margin-right: 5px;
+}
+
+.english-label {
+    margin-left: 5px;
+}
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.language-switcher:hover {
+    transform: scale(1.05);
+}
+
+.language-label {
+    transition: font-size 0.3s ease, margin-right 0.3s ease;
+}
+
+.language-switcher:hover .language-label {
+    font-size: 18px;
+    margin-right: +50px;
+}
+
+.logo img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 200px;
+    margin-bottom: 20px;
+    filter: grayscale(50%) brightness(120%);
+    transition: filter 0.5s ease;
+}
+
+.logo img:hover {
+    filter: none;
+}
+
+.icons img {
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    filter: grayscale(80%);
+    transition: filter 0.5s ease, transform 0.3s ease;
+}
+
+.icons img:hover {
+    filter: none;
+    transform: scale(1.2);
+}
+
+/* Стили для навигационного меню */
+.navigation-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation-menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navigation-menu a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #FFF;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navigation-menu a:hover {
+    color: #3498db;
+}
+
+.navigation-menu a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #3498db;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.navigation-menu a:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+.navigation-menu a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #FFF;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.navigation-menu a:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    font-family: 'Centro Sans Pro', sans-serif; /* Добавлено для использования шрифта Centro Sans Pro */
+}
+
+.title:hover {
+    color: #3498db;
+}
+
+.subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.images {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.images h3 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+}
+
+.images h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 50%;
+    height: 2px;
+    background-color: #FFA500;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.images h3:hover::after {
+    width: 100%;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.product {
+    position: relative;
+}
+
+.product-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 80%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product:hover .product-text {
+    opacity: 1;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    opacity: 1;
+    transition: transform 0.3s ease;
+    width: 220px;
+    height: 250px;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Стили для новой коллекции */
+.new-collection {
+    position: relative;
+    margin-top: 50px;
+    overflow: hidden; /* Добавлено для скрытия части псевдоэлемента за пределами родительского контейнера */
+}
+
+.collection-background {
+    background-color: #3498db;
+    height: 300px;
+    transition: opacity 0.5s ease, filter 0.5s ease; /* Добавлены переходы для анимации */
+}
+
+.new-collection:hover .collection-background {
+    opacity: 0.8; /* Прозрачность фона при наведении */
+    filter: brightness(80%); /* Уменьшение яркости фона при наведении */
+}
+
+.collection-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1; /* Расположение текста над псевдоэлементом */
+}
+
+.collection-content h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Proxima Nova', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.collection-content h2:hover {
+    color: #FFA500;
+}
+
+.collection-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-family: 'Museo Slab', sans-serif;
+}
+
+.catalog-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #3498db;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.catalog-link:hover {
+    background-color: #2980b9;
+    color: #fff;
+}
+
+/* Стили для новостей сезона */
+.season-news {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.season-news h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Avenir', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.category {
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.category:hover {
+    transform: scale(1.1);
+}
+
+.category img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 220px;
+    height: 250px;
+}
+
+.category p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.category:hover p {
+    color: #FFA500;
+}
+
+/* Стили для подвала */
+.footer {
+    background-color: #2C304E;
+    padding: 20px;
+    text-align: center;
+    color: #FFF;
+    font-family: 'Helvetica', sans-serif; /* Заменено на Helvetica для текста подвала */
+    transition: background-color 0.3s ease; /* Добавлено для анимации смены цвета фона */
+}
+
+.footer:hover {
+    background-color: #3F456F; /* Цвет фона при наведении мыши */
+}
+
+.footer-copyright {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-family: 'Helvetica', sans-serif; /* Заменено на Helvetica для текста подвала */
+}
+
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.privacy-policy {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.privacy-policy:hover {
+    color: #FFA500;
+}

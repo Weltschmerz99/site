@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ягодки - Онлайн-магазин</title>
+</head>
+
+<body>
+
+    <!-- Секция "Главный экран" -->
+    <section class="main-screen">
+        <!-- Переключатель языка и globe SVG -->
+        <div class="language-switcher" onclick="toggleLanguage()">
+            <label class="language-label russian-label" id="ruLabel">RU</label>
+            <label class="language-label english-label" id="enLabel" style="display: none;">EN</label>
+            <img src="globe_icon.jpg" alt="Globe Icon" class="icon">
+        </div>
+
+        <!-- Логотип и иконки -->
+        <div class="logo">
+            <img src="wildberry.jpg" alt="Ягодки Логотип" style="max-width: 80%; height: auto; filter: grayscale(50%) brightness(120%); transition: filter 0.5s ease;">
+        </div>
+        <div class="icons">
+            <a href="1.html"><img src="cart_icon.jpg" alt="Cart Icon" class="icon"></a>
+            <a href="1.html"><img src="user_icon.jpg" alt="User Icon" class="icon"></a>
+            <a href="1.html"><img src="search_icon.jpg" alt="Search Icon" class="icon"></a>
+        </div>
+
+        <!-- Навигационное меню -->
+        <nav class="navigation-menu">
+            <ul>
+                <li><a href="#" data-ru="Женщинам" data-en="For Women">Женщинам</a></li>
+                <li><a href="#" data-ru="Мужчинам" data-en="For Men">Мужчинам</a></li>
+                <li><a href="#" data-ru="Детям" data-en="For Kids">Детям</a></li>
+                <li><a href="#" data-ru="Акции" data-en="Promotions">Акции</a></li>
+                <li><a href="#footer" data-ru="Контакты" data-en="Contacts">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <!-- Заголовок и подзаголовок -->
+        <div class="title" data-ru="Добро пожаловать в магазин 'Ягодки'!" data-en="Welcome to the 'Berries' store!"></div>
+        <div class="subtitle" data-ru="Онлайн-магазин качественной одежды от российского производителя."
+            data-en="Online store of high-quality clothing from a Russian manufacturer."></div>
+
+        <!-- Изображения -->
+        <div class="images">
+            <h3 data-ru="Хиты" data-en="Hits">Хиты</h3>
+            <div class="image-container">
+                <div class="product">
+                    <a href="1.html">
+                        <img src="red_sweater.jpg" alt="Изображение 1" class="product-image">
+                        <p class="product-text" data-ru="Согревающая шапка" data-en="Warming Hat">Согревающая шапка</p>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="1.html">
+                        <img src="jeans.jpg" alt="Изображение 2" class="product-image">
+                        <p class="product-text" data-ru="Стильный плащ" data-en="Stylish Coat">Стильный плащ</p>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="1.html">
+                        <img src="jeans2.jpg" alt="Дополнительное изображение 1" class="product-image">
+                        <p class="product-text" data-ru="Молодежные джинсы" data-en="Youthful Jeans">Молодежные джинсы</p>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="1.html">
+                        <img src="sweater.jpg" alt="Дополнительное изображение 2" class="product-image">
+                        <p class="product-text" data-ru="Классический свитер" data-en="Classic Sweater">Классический свитер</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "Новая коллекция" -->
+    <section class="new-collection">
+        <div class="collection-background"></div>
+        <div class="collection-content">
+            <!-- Заголовок и подзаголовок -->
+            <h2><span data-hover-text="Вам понравится" data-ru="Новая коллекция" data-en="New Collection">Новая коллекция</span></h2>
+            <p data-ru="Стильная, футуристичная, необычная новая коллекция кашемировых костюмов. Все как вы и мы любим."
+                data-en="Stylish, futuristic, unusual new collection of cashmere suits. Everything you and we love."></p>
+
+            <!-- Элемент для перехода в каталог -->
+            <a href="#" class="catalog-link" data-ru="Перейти в каталог" data-en="Go to Catalog"></a>
+        </div>
+    </section>
+
+    <!-- Секция "Новинки сезона" -->
+    <section class="season-news">
+        <h2 data-ru="Новинки сезона осень-зима 2024" data-en="New Season's Offerings Fall-Winter 2024"></h2>
+
+        <!-- Категории -->
+        <div class="category">
+    <a href="1.html">
+        <img src="blue_kleidung.jpg" alt="Blue Category" class="product-image">
+        <p data-ru="Блю стайл" data-en="Blue style">Куртки</p>
+    </a>
+</div>
+
+<div class="category">
+    <a href="1.html">
+        <img src="red_hoody.jpg" alt="Red Category" class="product-image">
+        <p data-ru="Ред стайл" data-en="Red style">Толстовки</p>
+    </a>
+</div>
+
+<div class="category">
+    <a href="1.html">
+        <img src="green_sneakers.jpg" alt="Green Category" class="product-image">
+        <p data-ru="Грин стайл" data-en="Green style">Обувь</p>
+    </a>
+</div>
+
+<div class="category">
+    <a href="1.html">
+        <img src="pink_dress.jpg" alt="Pink Category" class="product-image">
+        <p data-ru="Пинк стайл" data-en="Pink style">Платья</p>
+    </a>
+</div>
+    </section>
+
+    <!-- Секция "Подвал" -->
+    <section id="footer" class="footer">
+        <div class="footer-copyright">
+            © 2024 Ягодки - Онлайн-магазин
+        </div>
+        <div class="social-icons">
+    <a href="1.html" class="social-icon"><img src="tg_icon.jpg" alt="Telegram Icon"></a>
+    <a href="1.html" class="social-icon"><img src="vk_icon.jpg" alt="VK Icon"></a>
+    <a href="1.html" class="social-icon"><img src="o_icon.jpg" alt="Odnoklassniki Icon"></a>
+</div>
+        <a href="#" class="privacy-policy" data-ru="Политика конфиденциальности" data-en="Privacy Policy"></a>
+    </section>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const targetElement = document.querySelector(this.getAttribute('href'));
+
+        if (targetElement) {
+            e.preventDefault();
+
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+
+            console.log('Scrolling to:', this.getAttribute('href'));
+        }
+    });
+});
+</script>
+
+    <!-- Скрипт для переключения языка -->
+    <script>
+        function toggleLanguage() {
+            let ruLabel = document.getElementById('ruLabel');
+            let enLabel = document.getElementById('enLabel');
+
+            ruLabel.style.display = ruLabel.style.display === 'none' ? 'inline' : 'none';
+            enLabel.style.display = enLabel.style.display === 'none' ? 'inline' : 'none';
+
+            let elementsToTranslate = document.querySelectorAll('[data-ru], [data-en]');
+
+            elementsToTranslate.forEach(element => {
+                if (ruLabel.style.display === 'none') {
+                    element.textContent = element.getAttribute('data-ru');
+                } else {
+                    element.textContent = element.getAttribute('data-en');
+                }
+            });
+
+            localStorage.setItem('language', ruLabel.style.display === 'none' ? 'ru' : 'en');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            let savedLanguage = localStorage.getItem('language');
+
+            if (savedLanguage) {
+                toggleLanguage();
+            }
+        });
+    </script>
+</body>
+
+</html>
